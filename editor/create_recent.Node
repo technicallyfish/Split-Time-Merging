@@ -1,0 +1,15 @@
+VideoStreamPlayer
+Node
+CollisionShape2D
+Area2D
+StaticBody2D
+Sprite2D
+Label
+CanvasLayer
+Button
+TextureRect
+TileMapLayer
+Marker2D
+WorldEnvironment
+Camera2D
+CharacterBody2D
