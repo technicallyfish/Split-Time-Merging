@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bc3gir3rbaxbq"]
+
+[ext_resource type="Texture2D" uid="uid://phkkda53ajy2" path="res://cloud_platform.png" id="1_lqa10"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jnehr"]
+radius = 84.0
+height = 1012.0
+
+[node name="CloudPlatform" type="Sprite2D" unique_id=477112435]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lqa10")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1994570548]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1036788421]
+position = Vector2(-2, 6)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_jnehr")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c4csg1gi0an42"]
+
+[ext_resource type="VideoStream" uid="uid://bfehuyxd7xb6d" path="res://Both-Games-Ending.ogv" id="1_ayd5w"]
+
+[node name="level_3" type="Node" unique_id=1778839093]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1896407968]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_ayd5w")

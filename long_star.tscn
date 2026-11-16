@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bsmpppx7lwdiy"]
+
+[ext_resource type="Texture2D" uid="uid://brhv0egklx10v" path="res://long_star.png" id="1_x1ram"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uy1k"]
+size = Vector2(882.193, 281.31592)
+
+[node name="long_star" type="Sprite2D" unique_id=1725094022]
+rotation = 1.5707964
+scale = Vector2(0.57, 0.57)
+texture = ExtResource("1_x1ram")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=447057002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=552952892]
+position = Vector2(25.307007, -1.4477539)
+shape = SubResource("RectangleShape2D_3uy1k")

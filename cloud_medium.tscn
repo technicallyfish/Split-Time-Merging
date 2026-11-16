@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bth6fiwxo5qtr"]
+
+[ext_resource type="Texture2D" uid="uid://dlay31120hi4i" path="res://cloud_medium.png" id="1_q78uv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t867d"]
+radius = 94.73682
+height = 878.94727
+
+[node name="CloudMedium" type="Sprite2D" unique_id=1548244994]
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("1_q78uv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=238243072]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=905234172]
+position = Vector2(71.05249, -18.421082)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_t867d")

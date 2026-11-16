@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://ctoiooopsqp1v"]
+
+[ext_resource type="Script" uid="uid://5f7h55ffkqdf" path="res://hanks_time_machine.gd" id="1_37p78"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sh265"]
+bg_color = Color(0.16637444, 0.16637427, 0.16637436, 0.4117647)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_xdqh6"]
+font_size = 36
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=524629467]
+script = ExtResource("1_37p78")
+
+[node name="Panel" type="Panel" parent="." unique_id=2085099326]
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 220.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sh265")
+
+[node name="DateLabel" type="Label" parent="." unique_id=832331102]
+unique_name_in_owner = true
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 212.0
+offset_bottom = 62.0
+text = "06/15/1689"
+label_settings = SubResource("LabelSettings_xdqh6")
+
+[node name="PopupPanel" type="PopupPanel" parent="." unique_id=2027907591]
+unique_name_in_owner = true
+size = Vector2i(500, 250)
+
+[node name="CenterContainer" type="CenterContainer" parent="PopupPanel" unique_id=375107274]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 496.0
+offset_bottom = 246.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/CenterContainer" unique_id=1826118182]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PopupPanel/CenterContainer/VBoxContainer" unique_id=515144709]
+layout_mode = 2
+text = "Enter a Date:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupPanel/CenterContainer/VBoxContainer" unique_id=692589139]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=490952249]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=265564450]
+layout_mode = 2
+text = "MM"
+
+[node name="MonthLine" type="LineEdit" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=291293469]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "month"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=982813048]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1282085446]
+layout_mode = 2
+text = "DD"
+
+[node name="DayLine" type="LineEdit" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1793096797]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "day"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=669196737]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1396942937]
+layout_mode = 2
+text = "YYYY"
+
+[node name="YearLine" type="LineEdit" parent="PopupPanel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=246400604]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "year"
+
+[node name="Submit" type="Button" parent="PopupPanel/CenterContainer/VBoxContainer" unique_id=154625490]
+layout_mode = 2
+text = "Go!"
+
+[node name="Incorrect" type="Label" parent="PopupPanel/CenterContainer/VBoxContainer" unique_id=414935619]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Not an accepted date."
+
+[connection signal="pressed" from="PopupPanel/CenterContainer/VBoxContainer/Submit" to="." method="_on_submit_pressed"]

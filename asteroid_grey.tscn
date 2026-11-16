@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c2w6cknp0htm"]
+
+[ext_resource type="Texture2D" uid="uid://bnbrvoujet6m6" path="res://asteroid_grey.png" id="1_557sv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t867d"]
+size = Vector2(901.4714, 858.8244)
+
+[node name="Sprite2D" type="Sprite2D" unique_id=634508634]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_557sv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1479787846]
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=668879810]
+position = Vector2(9.558716, -8.823486)
+scale = Vector2(0.999999, 0.9999989)
+shape = SubResource("RectangleShape2D_t867d")

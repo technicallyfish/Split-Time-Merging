@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://sxeh5qou6d6d"]
+
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dat7yh5x7a2j0" path="res://harold_foward.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(73, 127)
+
+[node name="Player" type="CharacterBody2D" unique_id=1416929455]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=630425377]
+position = Vector2(10.200005, 41.199997)
+scale = Vector2(0.18984376, 0.18984376)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=999501748]
+position = Vector2(10.5, 71.7)
+shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1354343011]

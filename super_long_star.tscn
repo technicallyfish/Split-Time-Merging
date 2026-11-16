@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4jsvd3qk3qlg"]
+
+[ext_resource type="Texture2D" uid="uid://d0ejxvu2ehksk" path="res://super_long_star.png" id="1_dxmvj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jnehr"]
+radius = 94.999756
+height = 984.99994
+
+[node name="super_long_star" type="Sprite2D" unique_id=397551605]
+rotation = -1.5707964
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_dxmvj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=260169801]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1415195070]
+position = Vector2(8.75, 7.5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_jnehr")
